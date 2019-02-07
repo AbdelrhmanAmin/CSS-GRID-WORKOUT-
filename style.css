@@ -1,0 +1,174 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,700');
+:root {
+    /* Fonts */
+    --font:'Raleway';
+    --light: 300;
+    --bold: 700;
+    /* Colors */
+    --black: #353535;
+    --gray: #4f4f4f;
+    --medium-gray: #737373;
+    --light-gray: #c4c4c4;
+    --orange: #f96855;
+    /* Semantic Color names */
+    --accent: var(--orange);
+    --body-background: var(--black);
+    --menu-background: var(--gray);
+    --main-font-color: var(--light-gray);
+    --menu-active-color: var(--light-gray);
+    --menu-font-color: var(--medium-gray);
+    --link-color: var(--accent);
+    --shadow: 0 1px 5px rgba(104, 104, 104, 0.8);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body {
+    background: wheat;
+    color: var(--main-font-color);
+    font-family: var(--font);
+    font-size: 1.2rem;
+    line-height: 1.45;
+    display: flex;
+    flex-wrap: wrap;
+}
+/* Navigation */
+.sidebar {
+    background: var(--menu-background);
+    flex: 1 1 30%;
+    min-width: 300px;
+    padding: 5em;
+    position: relative;
+    background-image: url(//unsplash.it/800/602);
+    background-blend-mode: multiply;
+    background-size: cover;
+    background-position: center;
+    transition: all ease-in-out 300ms;
+}
+.sidebar:hover {
+    background-position: bottom;
+}
+.sidebar::after {
+    content: '';
+    position: absolute;
+    border-bottom: 150px solid wheat;
+    border-left: 91.7vw solid transparent;
+    bottom: 0px;
+    z-index: 1;
+}
+.logo {
+    text-transform: uppercase;
+    margin-bottom: 2em;
+}
+.logo span {
+    font-weight: var(--bold);
+}
+.nav-item {
+    color: var(--menu-font-color);
+    text-decoration: none;
+    font-size: 1.7rem;
+    display: inline-block;
+    margin-right: 2em;
+}
+.nav-item-active {
+    color: var(--menu-active-color);
+    text-decoration: none;
+    font-size: 1.7rem;
+    display: inline-block;
+    margin-right: 2em;
+}
+/* Main content */
+.main-content {
+    padding: 10%;
+    flex: 1 1 80%;
+    min-height: 150vh;
+}
+
+/* Portfolio */
+.portfolio {
+    display: grid;
+    height: 100%;
+    grid-template-rows: repeat(8, 1fr);
+    grid-template-columns: repeat(5, 1fr);
+    grid-gap: 20px;
+}
+.portfolio-item {
+    background: var(--accent);
+    color: var(--light-gray);
+    font-weight: var(--bold);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5em;
+    background-size: cover;
+    background-position: top left;
+}
+.portfolio-item.medium {
+    grid-row: span 2;
+    grid-column: span 2;
+}
+.portfolio-item.large {
+    grid-row: span 3;
+    grid-column: span 3;
+}
+.portfolio-item.tall {
+    grid-row: span 3;
+    grid-column: span 2;
+}
+.portfolio-item.wide {
+    grid-row: span 2;
+    grid-column: span 3;
+}
+.two {
+    background-image: url(//unsplash.it/800/600);
+    background-position:  left;
+    color: var(--light-gray);
+    background-size: cover;
+    background-color: var(--black);
+    transition: all ease-in-out 300ms;
+}
+.two:hover {
+    background-blend-mode: none;
+    color: black;
+    background-position: top;
+}
+@media (min-width: 1500px) {
+    .logo {
+        margin-bottom: 5em;
+    }
+    .nav-item {
+        display: block;
+        margin: 7vh 0;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
